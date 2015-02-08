@@ -55,7 +55,7 @@ testMatrixCaching <- function() {
                               0, 1, 0,
                               0, 0, 1),
                             nrow = 3)
-        wrapped_i3 = makeCacheMatrix(identity3)
+        wrapped_i3 <- makeCacheMatrix(identity3)
         if (!is.null(wrapped_i3$getInverse())) {
                 message("wrapped_i3 has a non-empty cache!")
                 return(F)
@@ -75,12 +75,12 @@ testMatrixCaching <- function() {
                                  0, 1, 1,
                                  0, 0, 1),
                                nrow = 3)
-        expected_inverse = matrix(c(1, -1,  0,
+        expected_inverse <- matrix(c(1, -1,  0,
                                     0,  1, -1,
                                     0,  0,  1),
                                 nrow = 3)
 
-        wrapped_wedge = makeCacheMatrix(wedgy_matrix)
+        wrapped_wedge <- makeCacheMatrix(wedgy_matrix)
         if (!is.null(wrapped_wedge$getInverse())) {
                 message("wrapped_wedge has a non-empty cache!")
                 return(F)
